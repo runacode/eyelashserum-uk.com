@@ -437,11 +437,11 @@ KFormConfig::$campaignData = '{
     "webPages": {
         "catalogPage": {
             "disableBack": 0,
-            "url": "https:\/\/feg-uk.com\/"
+            "url": "https:\/\/www.eyelashserum-uk.com\/"
         },
         "checkoutPage": {
             "disableBack": 0,
-            "url": "https:\/\/feg-uk.com\/checkout.php",
+            "url": "https:\/\/www.eyelashserum-uk.com\/checkout.php",
             "autoImportLead": 1,
             "productId": null,
             "requireSig": 0,
@@ -451,14 +451,14 @@ KFormConfig::$campaignData = '{
         },
         "thankyouPage": {
             "disableBack": 0,
-            "url": "https:\/\/feg-uk.com\/thankyou.php",
+            "url": "https:\/\/www.eyelashserum-uk.com\/thankyou.php",
             "createAccountDialog": 0,
             "reorderUrl": null,
             "allowReorder": 0
         },
         "upsellPage1": {
             "disableBack": 1,
-            "url": "https:\/\/feg-uk.com\/upsell1.php",
+            "url": "https:\/\/www.eyelashserum-uk.com\/upsell1.php",
             "createAccountDialog": 0,
             "requirePayInfo": 0,
             "productId": 52,
@@ -466,7 +466,7 @@ KFormConfig::$campaignData = '{
         },
         "upsellPage2": {
             "disableBack": 1,
-            "url": "https:\/\/feg-uk.com\/upsell2.php",
+            "url": "https:\/\/www.eyelashserum-uk.com\/upsell2.php",
             "createAccountDialog": 0,
             "requirePayInfo": 0,
             "productId": 51,
@@ -474,7 +474,7 @@ KFormConfig::$campaignData = '{
         },
         "upsellPage3": {
             "disableBack": 1,
-            "url": "https:\/\/feg-uk.com\/upsell3.php",
+            "url": "https:\/\/www.eyelashserum-uk.com\/upsell3.php",
             "createAccountDialog": 0,
             "requirePayInfo": 0,
             "productId": 53,
@@ -495,7 +495,7 @@ KFormConfig::$campaignData = '{
             "productId": 49,
             "name": "Feg Serum - Eyelash Enhancer",
             "description": "*No description available",
-            "imagePath": "https:\/\/feg-uk.com\/resources\/images\/smain-small.jpg",
+            "imagePath": "https:\/\/www.eyelashserum-uk.com\/resources\/images\/smain-small.jpg",
             "imageId": 1,
             "price": "11.97",
             "shipPrice": "0.00",
@@ -505,7 +505,7 @@ KFormConfig::$campaignData = '{
             "productId": 50,
             "name": "Feg Serum - Eyelash Enhancer - Free",
             "description": "*No description available",
-            "imagePath": "https:\/\/feg-uk.com\/resources\/images\/smain-small.jpg",
+            "imagePath": "https:\/\/www.eyelashserum-uk.com\/resources\/images\/smain-small.jpg",
             "imageId": 1,
             "price": "0.00",
             "shipPrice": "0.00",
@@ -517,7 +517,7 @@ KFormConfig::$campaignData = '{
             "productId": 51,
             "name": "Feg Serum - Eyelash Enhancer - Free Gift",
             "description": "*No description available",
-            "imagePath": "https:\/\/feg-uk.com\/resources\/images\/upsell1.jpg",
+            "imagePath": "https:\/\/www.eyelashserum-uk.com\/resources\/images\/upsell1.jpg",
             "imageId": 1,
             "price": "4.95",
             "shipPrice": "0.00",
@@ -527,7 +527,7 @@ KFormConfig::$campaignData = '{
             "productId": 52,
             "name": "FEG - EyeBrown (2pcs - 2 months of treatment)",
             "description": "*No description available",
-            "imagePath": "https:\/\/feg-uk.com\/resources\/images\/upsell2.jpg",
+            "imagePath": "https:\/\/www.eyelashserum-uk.com\/resources\/images\/upsell2.jpg",
             "imageId": 2,
             "price": "9.95",
             "shipPrice": "0.00",
@@ -537,7 +537,7 @@ KFormConfig::$campaignData = '{
             "productId": 53,
             "name": "Silicone Make-Up Sponge",
             "description": "*No description available",
-            "imagePath": "https:\/\/feg-uk.com\/resources\/images\/upsell3.jpg",
+            "imagePath": "https:\/\/www.eyelashserum-uk.com\/resources\/images\/upsell3.jpg",
             "imageId": 3,
             "price": "4.95",
             "shipPrice": "0.00",
