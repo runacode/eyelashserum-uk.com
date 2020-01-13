@@ -485,7 +485,7 @@ KFormConfig::$campaignData = '{
         }
     },
     "landerType": "CART",
-    "googleTrackingId": "UA-155623562-6",
+    "googleTrackingId": "UA-156009617-5",
     "enableFraudPlugin": 0,
     "autoTax": 0,
     "taxServiceId": null,
