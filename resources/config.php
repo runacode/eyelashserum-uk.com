@@ -4,18 +4,20 @@ KformConfig::setConfig(array(
     "isWordpress" => false,
     "apiLoginId" => "os_api",
     "apiPassword" => 'p@$$w0rd123123',
-    "authString" => "39871422501d77894e0069d6646e810f",
-    "autoUpdate_allowedIps" => array("80.248.30.132"),
-    "campaignId" => 4,
-    "resourceDir" => "resources/"));
+    "authString"=>"d5baf2029d3cca1f4d014347542aecff",
+	"autoUpdate_allowedIps"=>array("80.248.30.132"),
+	"campaignId"=>13,
+	"resourceDir"=>"resources/"));
 
 
-/*
+
+
+/* 
 !---------------------------------IMPORTANT-----------------------------------!
 
 Documentation:
-
-	-Full documentation on landing pages can be found at
+	
+	-Full documentation on landing pages can be found at 
 
 Auto-Update Feature:
 
@@ -24,28 +26,29 @@ Auto-Update Feature:
 	to keep your landing page up-to-date concerning new coupons / shipping options
 	and product changes.
 
-	-To use the campaign auto-update feature, the apache or ngix user
+	-To use the campaign auto-update feature, the apache or ngix user 
 	(depending on your httpd software) must have write access to this file
-
-	-If you are not using the auto-update feature, you will need to manually
-	replace this file after making changes to the campaign
-
+	
+	-If you are not using the auto-update feature, you will need to manually 
+	replace this file after making changes to the campaign	
+	
 !---------------------------------IMPORTANT-----------------------------------!
 */
+
 class KFormConfig
 {
-
+	
 	public $isWordpress = false;
 	public $apiLoginId = '';
 	public $apiPassword = '';
 	public $resourceDir;
 	public $baseDir;
-
-
+	
+	
 	public $mobileRedirectUrl;
 	public $desktopRedirectUrl;
-
-
+	
+	
 	public $continents;
 	public $countries;
 	public $coupons;
@@ -60,31 +63,31 @@ class KFormConfig
 	public $taxes;
 	public $termsOfService;
 	public $webPages;
-
+	
 	static $instance = NULL;
 	static $options;
 	static $campaignData;
-	// class constructor to set the variable values
-
+	// class constructor to set the variable values	
+	
 	static function setConfig($options)
 	{
-		self::$options = $options;
+		self::$options = $options;	
 	}
-
+	
 	public function __construct()
 	{
 		if(!empty(self::$instance))
 			throw new Exception("cannot recreated KFormConfig");
-
+		
 		foreach((array) self::$options as $k=>$v)
 			$this->$k = $v;
-
+			
 		if($this->isWordpress)
 		{
 			$options = get_option('konnek_options');
 			foreach((array)$options as $k=>$v)
 				$this->$k = $v;
-
+		
 			$data = json_decode(get_option('konnek_campaign_data'));
 			foreach($data as $k=>$v)
 				$this->$k = $v;
@@ -105,16 +108,16 @@ class KFormConfig
 		}
 
 		self::$instance = $this;
-
-
+		
+	
 	}
 }
 
-/*
+/* 
 !---------------------------------IMPORTANT-----------------------------------!
 
 	ABSOLUTELY DO NOT EDIT BELOW THIS LINE
-
+	
 !---------------------------------IMPORTANT-----------------------------------!
 */
 $requestUri = $_SERVER['REQUEST_URI'];
@@ -122,16 +125,16 @@ $baseFile = basename(__FILE__);
 
 if($_SERVER['REQUEST_METHOD']=='POST' && strstr($requestUri,$baseFile))
 {
-
+	
 	$authString = filter_input(INPUT_POST,'authString',FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
 	if(empty($authString))
 		die(); //exit silently, don't want people to know that this file processes api requests if they are just sending random posts at it
-
-
+	
+	
 	$remoteIp = $_SERVER['REMOTE_ADDR'];
 	if (isset($_SERVER["HTTP_CF_CONNECTING_IP"]))
 		  $remoteIp =  $_SERVER["HTTP_CF_CONNECTING_IP"];
-
+	
 	$allowedIps = KFormConfig::$options['autoUpdate_allowedIps'];
 	if(!in_array($remoteIp,$allowedIps))
 		die("ERROR: Invalid IP Address. Please confirm that the Konnektive IP Address is in the allowedIps array.");
@@ -175,6 +178,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' && strstr($requestUri,$baseFile))
 }
 
 /*[DYNAMIC-DATA-TOKEN] do not remove */
+
 KFormConfig::$campaignData = '{
     "countries": {
         "GB": "United Kingdom"
