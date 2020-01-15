@@ -3,6 +3,9 @@
   "country_2": "United Kingdom",
   "currency": "&pound;",
   "FaceBookCurrency": "GBP",
+  "upsell1ID": 52,
+  "upsell2ID": 51,
+  "upsell3ID": 53,
   "products": [
     {
       "cid": 49,
